@@ -108,10 +108,10 @@ void sus(customer_entry s[100], int no_of_rec)		//sorting
 	
 	if(s[abc].getphone()==phno_infected)
 	{
-		cout<<"Details of the infected person\n";
+		cout<<"\nDetails of the infected person\n";
 		s[abc].output();
 		
-		cout<<"\nList of people to warn\n";
+		cout<<"\n\nList of people to warn\n";
 		while(j<=n)			//test cases
 		{
 		if(j!=abc)
@@ -257,7 +257,7 @@ int main()
 			system("pause");
 			break;
 	}
-	//latest commit
+	
 	system("CLS");
 	goto loop;
 	return 0;
