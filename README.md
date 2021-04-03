@@ -16,8 +16,12 @@ After all the customer details and exits have been stored, the report button can
 /*Enter the name as "amongus" for a hidden message */
 
 
-
+Video Link
 https://drive.google.com/file/d/1Oz8Q7AQMrHUR4BBr5Wj6A7Xc2SeCARGE/view
-Video link^
+
 
 Hint: Run the file in full screen mode. Delete the .dat file if you want to reset the data
+
+
+
+Alternative: The "side" branch contains the same version of the code but in arrays. That is a faster version of this program but however, the data formats if the program is closed. This edition stores the data in a binary file which is preserved even after the program is closed
