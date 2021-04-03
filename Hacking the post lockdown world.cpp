@@ -83,9 +83,22 @@ void customer_entry::input()
 
 void intro()
 {
-	cout<<setw(328)<<"Contact Tracing Software";	
-	cout<<setw(214)<<"by Aryan, Kushal and Shivam\n\n";
+	cout<<"Contact Tracing Software\n";
+	
+	int  i, j; 
+for(i = 1; i <= 5; i++)
+{
+for(j = 1; j <= i; j++)
+{
+cout << "* ";
 }
+cout <<"\n";
+
+}
+		
+	cout<<"by Aryan, Kushal and Shivam\n\n";
+}
+
 
 void sus(customer_entry s[100], int no_of_rec)		//sorting
 {
@@ -191,7 +204,7 @@ int main()
 	
 	loop: 
 	intro();
-	cout<<"Menu\n1:Customer Entry\n2:Customer Exit\n3:Show All Customers\n4:Report Case\n5:Exit\n";
+	cout<<"**********************\n*     Menu           *\n**********************\n*1:Customer Entry     *\n*2:Customer Exit     *\n*3:Show All Customers*\n*4:Report Case       *\n*5:Exit              *\n*********************";
 	cout<<"\n\nEnter your choice: ";
 	cin>>choice;
 	
