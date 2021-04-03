@@ -113,7 +113,7 @@ void sus(customer_entry s[100], int no_of_rec)
 					if(s[j].exit_sec >= s[abc].entry_sec && s[j].exit_sec <= s[abc].exit_sec)
 					{
 						s[j].output();
-						++j;
+						
 					}
 				}
 		 	} 
@@ -126,7 +126,7 @@ void sus(customer_entry s[100], int no_of_rec)
 					if(s[j].entry_sec <= s[abc].exit_sec && s[j].entry_sec >= s[abc].exit_sec)
 					{
 						s[j].output();
-						++j;
+						
 					}
 				}
 			}
@@ -138,7 +138,7 @@ void sus(customer_entry s[100], int no_of_rec)
 					if(s[j].entry_sec <= s[abc].entry_sec && s[j].exit_sec >= s[abc].exit_sec)
 					{
 						s[j].output();
-						++j;
+						
 					}
 				}
 			}
@@ -150,12 +150,13 @@ void sus(customer_entry s[100], int no_of_rec)
 					if(s[j].entry_sec >= s[abc].entry_sec && s[j].exit_sec <= s[abc].exit_sec)
 					{
 						s[j].output();
-						++j;
+						
 					}
 				}
 			}
-	
-	
+			
+			
+			++j;
 		}
 	}
 }	
@@ -216,14 +217,16 @@ int main()
 			while(start<=no_of_rec)
 			{
 				s[start].output();
+				++start;
 			}
-			
+			system("pause");
 			break;
 		}
 		
 		case 4:
 		{
 			sus(s,no_of_rec);
+			system("pause");
 			break;
 		}
 		
@@ -234,6 +237,7 @@ int main()
 				
 		default:
 			cout<<"\nnInvalid Option. Try again\n";
+			system("pause");
 			break;
 	}
 	
