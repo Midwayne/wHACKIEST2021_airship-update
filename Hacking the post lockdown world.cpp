@@ -132,11 +132,11 @@ void sus(customer_entry s[100], int no_of_rec)		//sorting
 		 	} 
 		 	
 		 	
-			if(s[j].entry_hour <= s[abc].exit_hour && s[j].entry_hour >= s[abc].exit_hour)
+			if(s[j].entry_hour <= s[abc].exit_hour && s[j].entry_hour >= s[abc].entry_hour)			
 			{
-				if(s[j].entry_min <= s[abc].exit_min && s[j].entry_min >= s[abc].exit_min)
+				if(s[j].entry_min <= s[abc].exit_min && s[j].entry_min >= s[abc].entry_min)
 				{
-					if(s[j].entry_sec <= s[abc].exit_sec && s[j].entry_sec >= s[abc].exit_sec)
+					if(s[j].entry_sec <= s[abc].exit_sec && s[j].entry_sec >= s[abc].entry_sec)
 					{
 						s[j].output();
 						goto loop2;
