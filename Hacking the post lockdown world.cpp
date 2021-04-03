@@ -102,9 +102,12 @@ void sus(customer_entry s[100], int no_of_rec)
 		cout<<"Details of the infected person\n";
 		s[abc].output();
 		
-		cout<<"List of people to warn\n";
+		cout<<"\nList of people to warn\n";
 		while(j<=n)
 		{
+		if(j!=abc)
+		{
+		
 	
 			if(s[j].exit_hour >= s[abc].entry_hour && s[j].exit_hour <= s[abc].exit_hour)
 			{
@@ -154,7 +157,7 @@ void sus(customer_entry s[100], int no_of_rec)
 					}
 				}
 			}
-			
+		}
 			
 			++j;
 		}
