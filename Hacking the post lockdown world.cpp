@@ -173,50 +173,61 @@ int main()
 	
 	loop: 
 	intro();
-	cout<<"Menu\n1:Customer Entry\n2:Customer Exit\n3: Show All Customers\n4:Report Case\n5:Exit\n";
+	cout<<"Menu\n1:Customer Entry\n2:Customer Exit\n3:Show All Customers\n4:Report Case\n5:Exit\n";
 	cout<<"\n\nEnter your choice: ";
 	cin>>choice;
 	
 
 	switch(choice)
 	{
-		case 1: {
+		case 1: 
+		{
 				
-				s[i].input();
-				no_of_rec+=1;
-			    ++i;
-				break;
-				}
-				
-				
-		case 2:{
-			
-		cout<<"Enter your phone number: ";
-			   cin>>phone_search;
-			   start=0;
-			    while(start<=no_of_rec)
-			    {
-			    	if(s[start].getphone()==phone_search)
-			    	{			
-			    	s[i].exit_time();
-			    	file.seekg(file.tellg()-sizeof(s[i]), ios::beg); 
-			    	file.write((char*)&s[i],sizeof(s[i]));
-					}	
-				}
+			s[i].input();
+			no_of_rec+=1;
+			++i;
 			break;
-				}
+		}
 				
 				
-		case 3:{
+		case 2:
+		{
+			
+			cout<<"Enter your phone number: ";
+			cin>>phone_search;
+			start=0;
+			
+			while(start<=no_of_rec)
+			{
+			    if(s[start].getphone()==phone_search)
+			    {			
+			    	s[start].exit_time();
+				}	
+			}
+			system("pause");
+			break;
+		}
+				
+				
+		case 3:
+		{
+			start=0;
+			while(start<=no_of_rec)
+			{
+				s[start].output();
+			}
 			
 			break;
-			   }
+		}
 		
-		case 4:{
+		case 4:
+		{
 			sus(s,no_of_rec);
 			break;
 		}
-		case 5:{
+		
+		case 5:
+		{
 			exit(0);
 		}
 				
