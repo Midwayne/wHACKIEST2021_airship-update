@@ -168,6 +168,7 @@ int main()
 	int i=0;
 	int choice;
 	int no_of_rec=0;
+	int start;
 	
 	
 	loop: 
@@ -183,9 +184,6 @@ int main()
 				
 				s[i].input();
 				no_of_rec+=1;
-				file.open("customer_data.dat",ios::in|ios::app|ios::binary);
-			    file.write((char*)&s[i],sizeof(s[i]));
-			    file.close();
 			    ++i;
 				break;
 				}
@@ -195,11 +193,10 @@ int main()
 			
 		cout<<"Enter your phone number: ";
 			   cin>>phone_search;
-			   file.open("customer_data.dat",ios::in|ios::out|ios::binary);
-			   file.seekg(ios::beg);
-			    while(file.read((char*)&s[i],sizeof(s[i])))
+			   start=0;
+			    while(start<=no_of_rec)
 			    {
-			    	if(phone_search==s[i].getphone())
+			    	if(s[start].getphone()==phone_search)
 			    	{			
 			    	s[i].exit_time();
 			    	file.seekg(file.tellg()-sizeof(s[i]), ios::beg); 
