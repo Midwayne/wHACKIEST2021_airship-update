@@ -203,6 +203,7 @@ int main()
 			    {			
 			    	s[start].exit_time();
 				}	
+				++start;
 			}
 			system("pause");
 			break;
