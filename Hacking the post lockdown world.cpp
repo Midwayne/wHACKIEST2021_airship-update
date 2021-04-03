@@ -78,6 +78,7 @@ void intro()
 	cout<<setw(214)<<"by Aryan, Kushal and Shivam\n\n";
 }
 
+
 void sus(customer_entry s[100], int no_of_rec)		//sorting
 {
 	int abc=0, j=0,n=no_of_rec;
