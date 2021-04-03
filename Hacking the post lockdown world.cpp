@@ -119,7 +119,7 @@ void sus(customer_entry s[100], int no_of_rec)
 		 	} 
 		 	
 		 	
-			if(s[j].entry_hour <= s[abc].exit_hour && s[j].entry_hour >= s[abc].exit_hour &&  && )
+			if(s[j].entry_hour <= s[abc].exit_hour && s[j].entry_hour >= s[abc].exit_hour)
 			{
 				if(s[j].entry_min <= s[abc].exit_min && s[j].entry_min >= s[abc].exit_min)
 				{
@@ -131,21 +131,31 @@ void sus(customer_entry s[100], int no_of_rec)
 				}
 			}
 		 
-		if(d.get_entry_hour() <= inf_entry_hour && d.get_exit_hour() >= inf_exit_hour && d.get_entry_min() <= inf_entry_min && d.get_exit_min() >= inf_exit_min && d.get_entry_sec() <= inf_entry_sec && d.get_exit_sec() >= inf_exit_sec)
-		  	d.output();
-		  
-		if(d.get_entry_hour() >= inf_entry_hour && d.get_exit_hour() <= inf_exit_hour && d.get_entry_min() >= inf_entry_min && d.get_exit_min() <= inf_exit_min && d.get_entry_sec() >= inf_entry_sec && d.get_exit_sec() <= inf_exit_sec)
-		 	d.output();
-	
-			*/
-			if(s[j].entry_hour<=s[abc].exit_hour && s[j].entry_min<=s[abc].exit_min && s[j].entry_sec<=s[abc].exit_sec)			//primary contact
+			if(s[j].entry_hour <= s[abc].entry_hour && s[j].exit_hour >= s[abc].exit_hour)
 			{
-				if(s[j].entry_hour>=s[abc].entry_hour && s[j].entry_min>=s[abc].entry_hour && s[j].entry_sec>=s[abc].entry_sec)
+				if(s[j].entry_min <= s[abc].entry_min && s[j].exit_min >= s[abc].exit_min)
 				{
-					s[j].output();
-					j++;
+					if(s[j].entry_sec <= s[abc].entry_sec && s[j].exit_sec >= s[abc].exit_sec)
+					{
+						s[j].output();
+						++j;
+					}
 				}
 			}
+		  
+			if(s[j].entry_hour >= s[abc].entry_hour && s[j].exit_hour <= s[abc].exit_hour)
+			{
+				if(s[j].entry_min >= s[abc].entry_min && s[j].exit_min <= s[abc].exit_min)
+				{
+					if(s[j].entry_sec >= s[abc].entry_sec && s[j].exit_sec <= s[abc].exit_sec)
+					{
+						s[j].output();
+						++j;
+					}
+				}
+			}
+	
+	
 		}
 	}
 }	
@@ -210,7 +220,6 @@ int main()
 			break;
 		}
 		case 5:{
-			
 			exit(0);
 		}
 				
