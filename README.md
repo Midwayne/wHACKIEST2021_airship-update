@@ -1,6 +1,6 @@
 # wHACKIEST2021_airship-update
-wHACKIEST 2021
-
+codeRIT Hackathon April 2nd to April 4th 2021: wHACKIEST 2021
+-By Kushal, Shivam and Aryan
 
 Contact tracing program
 
