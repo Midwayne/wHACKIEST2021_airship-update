@@ -1,8 +1,8 @@
 # wHACKIEST2021_airship-update
 codeRIT Hackathon April 2nd to April 4th 2021: wHACKIEST 2021
--By Kushal, Shivam and Aryan
 
-Contact tracing program
+
+Contact tracing program - By Kushal, Shivam and Aryan
 
 A program which stores the details and duration of people going to a store. If anyone who had gone to the store has tests positive for covid, the program will give the details of the people who are possible effected, them being who were at the store when the person entered and anyone who comes in after.
 
